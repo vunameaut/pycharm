@@ -1,0 +1,1 @@
+print("nam ta lang")
