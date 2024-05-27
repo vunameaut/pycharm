@@ -1,0 +1,24 @@
+Tên sinh viên: nam
+Điểm môn học 1: 2.0
+Điểm môn học 2: 3.0
+Điểm môn học 3: 4.0
+Điểm môn học 4: 5.0
+Điểm môn học 5: 6.0
+Tổng điểm: 20.0
+Điểm trung bình: 4.0
+Tên sinh viên: 2
+Điểm môn học 1: 3.0
+Điểm môn học 2: 4.0
+Điểm môn học 3: 5.0
+Điểm môn học 4: 6.0
+Điểm môn học 5: 7.0
+Tổng điểm: 45.0
+Điểm trung bình: 9.0
+Tên sinh viên: 8
+Điểm môn học 1: 9.0
+Điểm môn học 2: 9.0
+Điểm môn học 3: 9.0
+Điểm môn học 4: 9.0
+Điểm môn học 5: 9.0
+Tổng điểm: 90.0
+Điểm trung bình: 18.0

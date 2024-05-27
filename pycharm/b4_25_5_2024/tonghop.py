@@ -104,7 +104,12 @@ def main():
             
 
 
+    
 def bai1():
+    print(
+        "1.    Tính tổng số tiền của 250 000 con Gà cần mua vào mỗi mùa với số Gà được nhập từ SG (giá 15 nghìn/con):")
+
+    print("      Từ đó hãy cho biết nên mua gà vào mùa nào là hợp lý?\n")
     print("1: Mua vào mùa Xuân: giá tăng 15%")
     print("2: Mua vào mùa Hè: giá giảm 10%")
     print("3: Mua vào mùa Thu: giá tăng 25%")
@@ -294,12 +299,10 @@ def bai12():
             b= float(input("nhap vao chieu rong: "))
             print("dien tich la: ",a*b)
             print("chu vi la: ",2*(a+b))
-       
         elif i== 2 :
             r= float(input("nhap vao ban kinh: "))
             print("dien tich la: ",3.14*r*r)
             print("chu vi la: ",2*3.14*r)
-          
         elif i== 3 :
             a= float(input("nhap vao day lon: "))
             b= float(input("nhap vao day be: "))
@@ -354,6 +357,7 @@ def bai14():
 
 
 def bai15():
+    print("giải phương trình bậc nhất: ")
     a = float(input("Nhập hệ số a: "))
     b = float(input("Nhập hệ số b: "))
     if a == 0:
@@ -366,6 +370,7 @@ def bai15():
         print("Nghiệm của phương trình là: ", x)
 
 def bai16():
+    print("giải phương trình bậc hai: ")
     a= float(input("nhap vao a: "))
     b= float(input("nhap vao b: "))
     c= float(input("nhap vao c: "))
