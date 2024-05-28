@@ -134,24 +134,32 @@ def cau12():
         print("Người dùng ko nhập email")
     file.close()
 def cau13():
-    file_name = str(input("Nhập tên file muốn tạo: "))
-    file=open(file_name, "w")
-    tiennha= int(input("nhap vao so tien nha: "))
-    tienphong= int(input("nhap vao so tien phong: "))
-    tiendien = int(input("nhap vao so tien dien: "))
-    tiennuoc = int(input("nhap vao so tien nuoc: "))
-    tienguixe = int(input("nhap vao so tien gui xe: "))
+    # file_name = str(input("Nhập tên file muốn tạo: "))
+    # file=open(file_name, "w")
+    # tiennha= int(input("nhap vao so tien nha: "))
+    # tienphong= int(input("nhap vao so tien phong: "))
+    # tiendien = int(input("nhap vao so tien dien: "))
+    # tiennuoc = int(input("nhap vao so tien nuoc: "))
+    # tienguixe = int(input("nhap vao so tien gui xe: "))
 
-    file.write("tiền nhà: " + str(tiennha) +"\n")
-    file.write("tiền phòng: " + str(tienphong) +"\n")
-    file.write("tiền điện: " + str(tiendien) +"\n")
-    file.write("tiền nước: " + str(tiennuoc) +"\n")
-    file.write("tiền gửi xe: " + str(tienguixe) +"\n")
+    # file.write("tiền nhà: " + str(tiennha) +"\n")
+    # file.write("tiền phòng: " + str(tienphong) +"\n")
+    # file.write("tiền điện: " + str(tiendien) +"\n")
+    # file.write("tiền nước: " + str(tiennuoc) +"\n")
+    # file.write("tiền gửi xe: " + str(tienguixe) +"\n")
 
-    file.close()
-    filer=open(file_name, "r")
-    print(filer.read())
-    filer.close()
+    # file.close()
+    
+    with open("sinhhoat.txt", "r") as filer:
+        timkiem = input("Nhập vào nội dung muốn tìm kiếm: ")
+        noidung = filer.read()
+        if timkiem in noidung:
+            for dong in noidung.split('\n'):
+                if timkiem in dong:
+                    print(dong.strip())
+        else:
+            print("Không tìm thấy thông tin.")
+
 def cau14():
     file_name = str(input("Nhập tên file muốn xoa : "))
     file=open(file_name, "r")

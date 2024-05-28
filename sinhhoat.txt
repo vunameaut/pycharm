@@ -1,5 +1,5 @@
-: 12
-tiền phòng: 12
-tiền điện: 2
-tiền nước: 3
-tiền gửi xe: 4
+tiền nhà: 12
+tiền phòng: 23
+tiền điện: 43
+tiền nước: 54
+tiền gửi xe: 23
