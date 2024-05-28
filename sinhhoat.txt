@@ -1,0 +1,5 @@
+: 12
+tiền phòng: 12
+tiền điện: 2
+tiền nước: 3
+tiền gửi xe: 4

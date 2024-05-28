@@ -169,17 +169,19 @@ def cau11():
 
 while True:
     
-    print("Câu 1: Em hãy tạo một file là tên của em, trong file có đầy đủ thông tin cá nhân. (Thông tin nhập từ bàn phím)")
-    print("Câu 2: Từ câu 1, em hãy thêm thông tin của bạn em và đọc toàn bộ thông tin có trong file.")
-    print("Câu 3: Nhập thông tin hai số a và b vào file, tính tổng, hiệu, tích và thương của hai số đấy.")
-    print("Câu 4: Vẽ một hình mặt cười vào file và đọc mặt cười đấy.")
-    print("Câu 5: Nhập vào 1 dãy số tự động vào file, tính tổng và tích các số lẻ và số chẵn từ file đó.")
-    print("Câu 6: Nhập đầy đủ thông tin cá nhân của em và đếm ký tự của file đấy.")
-    print("Câu 7: Nhập vào số tự nhiên n vào file, tính giai thừa của số đấy.")
-    print("Câu 8: Nhập vào điểm của 5 sinh viên với 5 môn học khác nhau, Tính tổng và trung bình của mỗi em. Tìm ra sinh viên có điểm trung bình cao nhất và thấp nhất.")
-    print("Câu 9: Tạo một danh sách thư mời đến bữa tiệc sinh nhật, hãy xóa một thành viên có trong thư mời đó bất kỳ.")
-    print("câu 10: Tạo một danh sách các số tự nhiên từ 1 đến 100, tìm ra số lớn nhất và nhỏ nhất.")
-    print("câu 11:  Nhập vào sô tự nhiên n vào file, tính tong của các số chẵn từ 1 đến n.")
+    print("0: để đọc file")
+    print("1: Em hãy tạo một file là tên của em, trong file có đầy đủ thông tin cá nhân. (Thông tin nhập từ bàn phím)")
+    print("2: Từ câu 1, em hãy thêm thông tin của bạn em và đọc toàn bộ thông tin có trong file.")
+    print("3: Nhập thông tin hai số a và b vào file, tính tổng, hiệu, tích và thương của hai số đấy.")
+    print("4: Vẽ một hình mặt cười vào file và đọc mặt cười đấy.")
+    print("5: Nhập vào 1 dãy số tự động vào file, tính tổng và tích các số lẻ và số chẵn từ file đó.")
+    print("6: Nhập đầy đủ thông tin cá nhân của em và đếm ký tự của file đấy.")
+    print("7: Nhập vào số tự nhiên n vào file, tính giai thừa của số đấy.")
+    print("8: Nhập vào điểm của 5 sinh viên với 5 môn học khác nhau, Tính tổng và trung bình của mỗi em. Tìm ra sinh viên có điểm trung bình cao nhất và thấp nhất.")
+    print("9: Tạo một danh sách thư mời đến bữa tiệc sinh nhật, hãy xóa một thành viên có trong thư mời đó bất kỳ.")
+    print("10: Tạo một danh sách các số tự nhiên từ 1 đến 100, tìm ra số lớn nhất và nhỏ nhất.")
+    print("11:  Nhập vào sô tự nhiên n vào file, tính tong của các số chẵn từ 1 đến n.")
+    print("12: Thoát")
     chon=int(input("nhap vao lua chon: "))
 
     match(chon):
@@ -187,7 +189,6 @@ while True:
             docfile()
         case 1:
             cau1()
-            
         case 2:
             cau2()
         case 3:
