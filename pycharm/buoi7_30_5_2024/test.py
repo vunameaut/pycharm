@@ -567,20 +567,20 @@ cau6()
 
 
 
-# while True:
-#     chon=int(input("nhập vào lựa chọn của bạn: "))
-#     match(chon):
-#         case 1:
-#             cau1()
-#         case 2:
-#             cau2()
-#         case 3:
-#             cau3()
-#         case 4:
-#             cau4()
-#         case 5:
-#             cau5()
-#         case 6:
-#             cau6()
-#         case 7:
-#             break
+while True:
+    chon=int(input("nhập vào lựa chọn của bạn: "))
+    match(chon):
+        case 1:
+            cau1()
+        case 2:
+            cau2()
+        case 3:
+            cau3()
+        case 4:
+            cau4()
+        case 5:
+            cau5()
+        case 6:
+            cau6()
+        case 7:
+            break
