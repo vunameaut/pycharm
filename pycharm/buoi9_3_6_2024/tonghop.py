@@ -152,6 +152,8 @@ def cau6():
         else:
             nguon_nhap.delete(0, END)
 
+    def xoa():
+        nhom_ketqua.delete(0, END)
     nhan_dan = Label(text="Nhập số vào đây:")
     nhan_dan.pack(pady=10)
 
@@ -161,6 +163,8 @@ def cau6():
     them = Button(text="Thêm vào danh sách ", command=list)
     them.pack(pady=5)
 
+    xoa = Button(text="Xóa danh sách ", command=xoa)
+    xoa.pack(pady=5)
     nhom_ketqua = Listbox()
     nhom_ketqua.pack(pady=6)
 
