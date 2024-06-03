@@ -260,7 +260,7 @@ def cau9():
     def lammoidanhsach():
         danhsach.delete(0, END)
         with open("ten_tuoi.csv", "r") as file:
-            lines = file.readlines()  # Đọc từng dòng trong file
+            lines = file.readlines()
             for line in lines:
                 danhsach.insert(END, line.strip())
 
@@ -276,10 +276,10 @@ def cau9():
     tuoi = Entry()
     tuoi.pack(pady=5)
 
-    nhap_moi = Button(text="Nhập mới", command= lambda :(lammoi() , lammoidanhsach()))
+    nhap_moi = Button(text="Nhập mới", command=lambda:(lammoi(), lammoidanhsach()))
     nhap_moi.pack(pady=5)
 
-    them = Button(text="Thêm thông tin ", command=lambda :(themthongtin(), lammoidanhsach()))
+    them = Button(text="Thêm thông tin ", command=lambda:(themthongtin(), lammoidanhsach()))
     them.pack(pady=5)
 
     danhsach= Listbox()
