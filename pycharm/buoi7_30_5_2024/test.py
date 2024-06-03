@@ -563,7 +563,7 @@ def cau6():
     c.hideturtle()
     w.mainloop()
 
-cau6()
+
 
 
 
