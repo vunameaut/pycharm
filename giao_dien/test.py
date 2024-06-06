@@ -1,0 +1,1 @@
+﻿print("nam taf langfw")
