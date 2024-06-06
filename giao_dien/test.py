@@ -1,1 +1,0 @@
-﻿print("nam taf langfw")

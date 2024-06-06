@@ -285,12 +285,8 @@ def cau3():
     button_hien_thi = Button(text="Hiển thị thông tin",command=hien_thi)
     button_hien_thi.grid(row=6,column=0,padx=10,pady=10)
 
-    #nếu không có ô entry nào trống thì thông báo ra là nhập thành công không thì sẽ thông báo là nhập thất bại
-    button_nhap = Button(text="Nhập thông tin",command=nhap_thong_tin)
-    button_nhap.grid(row=6,column=1,padx=10,pady=10)
-    button_thoat = Button(text="Thoát",command=thoat)
-    button_thoat.grid(row=6,column=2,padx=10,pady=10)
-    w.mainloop()
+
+
 
 cau2()
     
