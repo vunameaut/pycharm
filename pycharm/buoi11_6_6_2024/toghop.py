@@ -13,7 +13,7 @@ def cau1():
 
 
     img_import = Image.open(r"D:/hoc tap/python/pycharm/buoi11_6_6_2024/mat.png")
-    resize_img = img_import.resize((200, 200), Image.ANTIALIAS)
+    resize_img = img_import.resize((200, 200))
 
 
     img = ImageTk.PhotoImage(resize_img)
@@ -184,10 +184,11 @@ def cau6():
         so = int(n.get())
         img_path = f"{so}.gif"
         img_import = Image.open(img_path)
-        resize_img = img_import.resize((200, 200), Image.ANTIALIAS)
+        resize_img = img_import.resize((200, 200) )
         img = ImageTk.PhotoImage(resize_img)
         label_anh.config(image=img)
         label_anh.image = img
+        n.delete(0,END)
 
     tn = Label(w, text = "Nhập vào số nguyên dương n: ")
     tn.grid(row = 0, column = 0, padx = 10, pady = 10)
@@ -201,7 +202,13 @@ def cau6():
     label_anh = Label(w, text = "")
     label_anh.grid(row = 1, column = 0, columnspan = 3, padx = 10, pady = 10)
 
-
-        
-
     w.mainloop()
+
+
+while True:
+    chon = int(input(text="nhập lựa chọn: "))
+    match(chon):
+        case 1:
+            cau1()
+        case 2:
+            cau2()
