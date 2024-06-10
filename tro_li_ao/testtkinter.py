@@ -26,6 +26,8 @@ while True:
         robot_brain = "I can'n hear you,try again"
     elif "Hello" in you:
         robot_brain = "Hello bạn"
+    elif "Chào bạn" in you:
+        robot_brain = "chào con cặc"
     elif "today" in you:
         today = date.today()
         robot_brain = today.strftime("%B %d, %Y")

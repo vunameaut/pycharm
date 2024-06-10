@@ -1,4 +1,7 @@
-﻿print ("b20: code vẽ trái tim ")
+﻿
+
+
+print ("b20: code vẽ trái tim ")
 
 heart = '''
     **     **

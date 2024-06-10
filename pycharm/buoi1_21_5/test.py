@@ -1,1 +1,0 @@
-print("nam ta lang")
