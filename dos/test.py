@@ -24,7 +24,8 @@ from io import BytesIO
 while True:
     b = BytesIO()
     c = pycurl.Curl()
-    c.setopt(pycurl.URL, "https://www.youtube.com")
+    c.setopt(pycurl.URL, "http://sinhvien.eaut.edu.vn/")
     c.setopt(pycurl.WRITEDATA, b)
+    print("gửi thành công")
     c.perform()
     c.close()
