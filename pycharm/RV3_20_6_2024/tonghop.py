@@ -72,15 +72,15 @@ def taobang():
 
 def quan_ly_sach():
     w.withdraw()
-    sub_window = Toplevel()
-    sub_window.title("Quản lý sách")
-    sub_window.attributes('-fullscreen', True)
+    quanlysach = Toplevel()
+    quanlysach.title("Quản lý sách")
+    quanlysach.attributes('-fullscreen', True)
 
     def on_close():
         w.deiconify()
-        sub_window.destroy()
+        quanlysach.destroy()
 
-    sub_window.protocol("WM_DELETE_WINDOW", on_close)
+    quanlysach.protocol("WM_DELETE_WINDOW", on_close)
 
     mydb = mysql.connector.connect(
         host="localhost",
@@ -164,49 +164,49 @@ def quan_ly_sach():
                 messagebox.showinfo("Thông tin", "Không tìm thấy sách")
 
     columns = ('ID', 'Tên sách', 'Tác giả', 'Năm xuất bản', 'Có sẵn')
-    viewtree = ttk.Treeview(sub_window, columns=columns, show='headings', selectmode='browse')
+    viewtree = ttk.Treeview(quanlysach, columns=columns, show='headings', selectmode='browse')
     viewtree.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
 
     for col in columns:
         viewtree.heading(col, text=col)
 
-    Label(sub_window, text="Tên sách").grid(row=1, column=0, padx=10, pady=10)
-    title_entry = Entry(sub_window)
+    Label(quanlysach, text="Tên sách").grid(row=1, column=0, padx=10, pady=10)
+    title_entry = Entry(quanlysach)
     title_entry.grid(row=1, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Tác giả").grid(row=2, column=0, padx=10, pady=10)
-    author_entry = Entry(sub_window)
+    Label(quanlysach, text="Tác giả").grid(row=2, column=0, padx=10, pady=10)
+    author_entry = Entry(quanlysach)
     author_entry.grid(row=2, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Năm xuất bản").grid(row=3, column=0, padx=10, pady=10)
-    year_entry = Entry(sub_window)
+    Label(quanlysach, text="Năm xuất bản").grid(row=3, column=0, padx=10, pady=10)
+    year_entry = Entry(quanlysach)
     year_entry.grid(row=3, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Có sẵn").grid(row=4, column=0, padx=10, pady=10)
+    Label(quanlysach, text="Có sẵn").grid(row=4, column=0, padx=10, pady=10)
     available_var = BooleanVar()
-    Checkbutton(sub_window, text="Có sẵn", variable=available_var).grid(row=4, column=1, padx=10, pady=10)
+    Checkbutton(quanlysach, text="Có sẵn", variable=available_var).grid(row=4, column=1, padx=10, pady=10)
 
-    Button(sub_window, text="Thêm sách", command=them_sach).grid(row=5, column=0, padx=10, pady=10)
-    Button(sub_window, text="Cập nhật sách", command=cap_nhat_sach).grid(row=5, column=1, padx=10, pady=10)
-    Button(sub_window, text="Xóa sách", command=xoa_sach).grid(row=6, column=0, padx=10, pady=10)
-    Button(sub_window, text="Tìm kiếm sách", command=tim_kiem_sach).grid(row=6, column=1, padx=10, pady=10)
-    Button(sub_window, text="Quay lại", command= on_close).grid(row=7, column=1, padx=10, pady=10)
+    Button(quanlysach, text="Thêm sách", command=them_sach).grid(row=5, column=0, padx=10, pady=10)
+    Button(quanlysach, text="Cập nhật sách", command=cap_nhat_sach).grid(row=5, column=1, padx=10, pady=10)
+    Button(quanlysach, text="Xóa sách", command=xoa_sach).grid(row=6, column=0, padx=10, pady=10)
+    Button(quanlysach, text="Tìm kiếm sách", command=tim_kiem_sach).grid(row=6, column=1, padx=10, pady=10)
+    Button(quanlysach, text="Quay lại", command= on_close).grid(row=7, column=1, padx=10, pady=10)
 
     hien_thi_danh_sach_sach()
-    sub_window.mainloop()
+    quanlysach.mainloop()
 
 
 def muonsach():
     w.withdraw()
-    sub_window = Toplevel()
-    sub_window.title("Mượn sách")
-    sub_window.attributes('-fullscreen', True)
+    quanlysach = Toplevel()
+    quanlysach.title("Mượn sách")
+    quanlysach.attributes('-fullscreen', True)
 
     def on_close():
         w.deiconify()
-        sub_window.destroy()
+        quanlysach.destroy()
 
-    sub_window.protocol("WM_DELETE_WINDOW", on_close)
+    quanlysach.protocol("WM_DELETE_WINDOW", on_close)
 
     mydb = mysql.connector.connect(
         host="localhost",
@@ -258,41 +258,41 @@ def muonsach():
             messagebox.showerror("Lỗi", "Vui lòng nhập ID mượn sách hợp lệ")
 
     columns = ('ID', 'Tên sách', 'Tác giả', 'Ngày mượn', 'Ngày trả')
-    viewtree = ttk.Treeview(sub_window, columns=columns, show='headings', selectmode='browse')
+    viewtree = ttk.Treeview(quanlysach, columns=columns, show='headings', selectmode='browse')
     viewtree.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
 
     for col in columns:
         viewtree.heading(col, text=col)
 
-    Label(sub_window, text="Tên người mượn").grid(row=1, column=0, padx=10, pady=10)
-    user_entry = Entry(sub_window)
+    Label(quanlysach, text="Tên người mượn").grid(row=1, column=0, padx=10, pady=10)
+    user_entry = Entry(quanlysach)
     user_entry.grid(row=1, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Ngày mượn").grid(row=2, column=0, padx=10, pady=10)
-    borrow_date_entry = Entry(sub_window)
+    Label(quanlysach, text="Ngày mượn").grid(row=2, column=0, padx=10, pady=10)
+    borrow_date_entry = Entry(quanlysach)
     borrow_date_entry.grid(row=2, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Ngày trả").grid(row=3, column=0, padx=10, pady=10)
-    return_date_entry = Entry(sub_window)
+    Label(quanlysach, text="Ngày trả").grid(row=3, column=0, padx=10, pady=10)
+    return_date_entry = Entry(quanlysach)
     return_date_entry.grid(row=3, column=1, padx=10, pady=10)
 
-    Button(sub_window, text="Mượn sách", command=muon_sach).grid(row=4, column=0, padx=10, pady=10)
-    Button(sub_window, text="Trả sách", command=tra_sach).grid(row=4, column=1, padx=10, pady=10)
-    Button(sub_window, text="Quay lại", command= on_close).grid(row=5, column=1, padx=10, pady=10)
+    Button(quanlysach, text="Mượn sách", command=muon_sach).grid(row=4, column=0, padx=10, pady=10)
+    Button(quanlysach, text="Trả sách", command=tra_sach).grid(row=4, column=1, padx=10, pady=10)
+    Button(quanlysach, text="Quay lại", command= on_close).grid(row=5, column=1, padx=10, pady=10)
 
     hien_thi_danh_sach_sach_muon()
-    sub_window.mainloop()
+    quanlysach.mainloop()
 def xemthongtin():
     w.withdraw()
-    sub_window = Toplevel()
-    sub_window.title("Xem thông tin sách đã mượn")
-    sub_window.attributes('-fullscreen', True)
+    quanlysach = Toplevel()
+    quanlysach.title("Xem thông tin sách đã mượn")
+    quanlysach.attributes('-fullscreen', True)
 
     def on_close():
         w.deiconify()
-        sub_window.destroy()
+        quanlysach.destroy()
 
-    sub_window.protocol("WM_DELETE_WINDOW", on_close)
+    quanlysach.protocol("WM_DELETE_WINDOW", on_close)
 
     mydb = mysql.connector.connect(
         host="localhost",
@@ -314,27 +314,27 @@ def xemthongtin():
                 viewtree.insert('', 'end', values=book)
 
     columns = ('ID', 'Tên sách', 'Tác giả', 'Ngày mượn', 'Ngày trả')
-    viewtree = ttk.Treeview(sub_window, columns=columns, show='headings', selectmode='browse')
+    viewtree = ttk.Treeview(quanlysach, columns=columns, show='headings', selectmode='browse')
     viewtree.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
 
     for col in columns:
         viewtree.heading(col, text=col)
 
-    Button(sub_window, text="Quay lại", command=on_close).grid(row=1, column=0, padx=10, pady=10)
+    Button(quanlysach, text="Quay lại", command=on_close).grid(row=1, column=0, padx=10, pady=10)
 
     hien_thi_danh_sach_sach_muon()
-    sub_window.mainloop()
+    quanlysach.mainloop()
 def sach_dang_muon():
     w.withdraw()
-    sub_window = Toplevel()
-    sub_window.title("Sách đang được mượn")
-    sub_window.attributes('-fullscreen', True)
+    quanlysach = Toplevel()
+    quanlysach.title("Sách đang được mượn")
+    quanlysach.attributes('-fullscreen', True)
 
     def on_close():
         w.deiconify()
-        sub_window.destroy()
+        quanlysach.destroy()
 
-    sub_window.protocol("WM_DELETE_WINDOW", on_close)
+    quanlysach.protocol("WM_DELETE_WINDOW", on_close)
 
     mydb = mysql.connector.connect(
         host="localhost",
@@ -356,27 +356,27 @@ def sach_dang_muon():
                 viewtree.insert("", "end", values=book)
 
     columns = ('Tên sách', 'Tác giả', 'Ngày mượn', 'Ngày trả')
-    viewtree = ttk.Treeview(sub_window, columns=columns, show='headings', selectmode='browse')
+    viewtree = ttk.Treeview(quanlysach, columns=columns, show='headings', selectmode='browse')
     viewtree.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
 
     for col in columns:
         viewtree.heading(col, text=col)
 
-    Button(sub_window, text="Quay lại", command=on_close).grid(row=1, column=0, padx=10, pady=10)
+    Button(quanlysach, text="Quay lại", command=on_close).grid(row=1, column=0, padx=10, pady=10)
 
     hien_thi_danh_sach_sach_muon()
-    sub_window.mainloop()
+    quanlysach.mainloop()
 def kiemtra():
     w.withdraw()
-    sub_window = Toplevel()
-    sub_window.title("Kiểm tra")
-    sub_window.attributes('-fullscreen', True)
+    quanlysach = Toplevel()
+    quanlysach.title("Kiểm tra")
+    quanlysach.attributes('-fullscreen', True)
 
     def on_close():
         w.deiconify()
-        sub_window.destroy()
+        quanlysach.destroy()
 
-    sub_window.protocol("WM_DELETE_WINDOW", on_close)
+    quanlysach.protocol("WM_DELETE_WINDOW", on_close)
 
     def check_book_availability():
         mydb = mysql.connector.connect(
@@ -394,28 +394,28 @@ def kiemtra():
             tree.insert('', 'end', values=book)
 
     columns = ('ID', 'Title', 'Author', 'Available')
-    tree = ttk.Treeview(sub_window, columns=columns, show='headings')
+    tree = ttk.Treeview(quanlysach, columns=columns, show='headings')
     for col in columns:
         tree.heading(col, text=col)
 
     tree.pack(fill=BOTH, expand=True)
 
-    Button(sub_window, text="Kiểm tra sách còn tồn", command=check_book_availability).pack(pady=20)
-    Button(sub_window, text="Quay lại", command=on_close).pack(pady=20)
+    Button(quanlysach, text="Kiểm tra sách còn tồn", command=check_book_availability).pack(pady=20)
+    Button(quanlysach, text="Quay lại", command=on_close).pack(pady=20)
 
-    sub_window.mainloop()
+    quanlysach.mainloop()
 
 def formql():
     w.withdraw()
-    sub_window = Toplevel()
-    sub_window.title("Yêu cầu người dùng")
-    sub_window.attributes('-fullscreen', True)
+    quanlysach = Toplevel()
+    quanlysach.title("Yêu cầu người dùng")
+    quanlysach.attributes('-fullscreen', True)
 
     def on_close():
         w.deiconify()
-        sub_window.destroy()
+        quanlysach.destroy()
 
-    sub_window.protocol("WM_DELETE_WINDOW", on_close)
+    quanlysach.protocol("WM_DELETE_WINDOW", on_close)
 
     mydb = mysql.connector.connect(
         host="localhost",
@@ -448,22 +448,22 @@ def formql():
 
         messagebox.showinfo("Success", "Yêu cầu của bạn đã được gửi thành công!")
 
-    Label(sub_window, text="Họ và tên").grid(row=0, column=0, padx=10, pady=10)
-    name_entry = Entry(sub_window)
+    Label(quanlysach, text="Họ và tên").grid(row=0, column=0, padx=10, pady=10)
+    name_entry = Entry(quanlysach)
     name_entry.grid(row=0, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Email").grid(row=1, column=0, padx=10, pady=10)
-    email_entry = Entry(sub_window)
+    Label(quanlysach, text="Email").grid(row=1, column=0, padx=10, pady=10)
+    email_entry = Entry(quanlysach)
     email_entry.grid(row=1, column=1, padx=10, pady=10)
 
-    Label(sub_window, text="Yêu cầu").grid(row=2, column=0, padx=10, pady=10)
-    request_text = Text(sub_window, height=10, width=50)
+    Label(quanlysach, text="Yêu cầu").grid(row=2, column=0, padx=10, pady=10)
+    request_text = Text(quanlysach, height=10, width=50)
     request_text.grid(row=2, column=1, padx=10, pady=10)
 
-    Button(sub_window, text="Gửi yêu cầu", command=save_user_request).grid(row=3, column=0, columnspan=2, padx=10, pady=10)
-    Button(sub_window, text="Quay lại", command=on_close).grid(row=4, column=0, columnspan=2, padx=10, pady=10)
+    Button(quanlysach, text="Gửi yêu cầu", command=save_user_request).grid(row=3, column=0, columnspan=2, padx=10, pady=10)
+    Button(quanlysach, text="Quay lại", command=on_close).grid(row=4, column=0, columnspan=2, padx=10, pady=10)
 
-    sub_window.mainloop()
+    quanlysach.mainloop()
 w = Tk()
 w.title("Library Management System")
 w.geometry("800x600")
@@ -487,10 +487,8 @@ button5.pack(pady=10)
 button6.pack(pady=10)
 button7.pack(pady=10)
 
-taodatabase()
-taobang()
-w.mainloop()
 
+w.mainloop()
 
 
 
