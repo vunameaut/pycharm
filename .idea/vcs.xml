@@ -3,7 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/QLGV" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/QLGV/Hiep/QT-PyQt-PySide-Custom-Widgets" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/QLGV/nam/SC_pyqt5_LoginUI3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/QLGV/cuong/QLGV" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/abc/QLGV" vcs="Git" />
   </component>
 </project>
